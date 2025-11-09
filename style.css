@@ -1,0 +1,93 @@
+body{
+    background-color: aqua;
+}
+
+input, textarea, select {
+    background-color: #dee8ed;
+    border: 1px solid #000000;
+    color: #000000;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+center {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 150px;
+}
+
+label th, table td {
+    font-weight: normal;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+button {
+    background-color: #d73737;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #4971df;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+table th {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: center;
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+h1, h2 {
+    font-size: 45px;
+    color: #333;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAHASISWA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <h1>INPUT DATA MAHASISWA</h1>
+        <form id="dataForm">
+            <label for="nim">Nim :</label><br>
+            <input type="text" id="nim" name="nim"><br><br>
+
+            <label for="nama">Nama :</label><br>
+            <input type="text" id="nama" name="nama"><br><br>
+
+            <label>Genre : </label><br><br>
+            <label for="pria">Pria</label>
+            <input type="radio" id="pria" name="gender" value="Pria">
+            <label for="wanita">Wanita</label>
+            <input type="radio" id="wanita" name="gender" value="Wanita"><br><br><br>
+
+            <label for="tl">Tempat Lahir :</label>
+            <select id="tl" required>
+                <option value="">--Pilih Kota--</option>
+                <option value="Denpasar">Denpasar</option>
+                <option value="Badung">Badung</option>
+                <option value="Gianyar">Gianyar</option>
+                <option value="Tabanan">Tabanan</option>
+                <option value="Jembrana">Jembrana</option>
+            </select><br><br>
+            
+            <label for="Tlahir">Tanggal Lahir :</label>
+            <input type="date" id="Tlahir"><br><br>
+
+            <label for="alamat">Alamat :</label><br>
+            <textarea id="alamat" rows="3" cols="30"></textarea><br><br>
+
+            <label for="hp">No. HP :</label><br>
+            <input type="tel" id="hp" name="hp" required><br><br>
+            
+            <label for="email">Email :</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="hobi">Hobi :</label><br>
+            <select name="hobi" id="hobi">
+                <option value="">--Pilih Hobi--</option>
+                <option value="Membaca">Membaca</option>
+                <option value="Olahraga">Olahraga</option>
+                <option value="Gaming">Gaming</option>
+                <option value="Travelling">Travelling</option>
+            </select><br><br>
+            
+            <button type="submit">Tambah Data</button>
+        </form>
+
+        <h2>TABEL DATA</h2>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nim</th>
+                    <th>Nama</th>
+                    <th>Genre</th>
+                    <th>Tempat Lahir</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Alamat</th>
+                    <th>No. HP</th>
+                    <th>Email</th>
+                    <th>Hobi</th>
+                </tr>
+            </thead>
+            <tbody id="tabelbody">
+
+            </tbody>
+        </table>
+        <script>
+            const form = document.getElementById("dataForm");
+            const tabelbody = document.getElementById("tabelbody");
+
+            form.addEventListener("submit", function(event){
+                event.preventDefault();
+
+                const nim = document.getElementById("nim").value;
+                const nama = document.getElementById("nama").value;
+                const genre = document.querySelector('input[name="gender"]:checked').value;
+                const tempat = document.getElementById("tl").value;
+                const tanggal = document.getElementById("Tlahir").value;
+                const alamat = document.getElementById("alamat").value;
+                const hp = document.getElementById("hp").value;
+                const email = document.getElementById("email").value;
+                const hobi = document.getElementById("hobi").value;
+                const row = `<tr>
+                                <td>${nim}</td>
+                                <td>${nama}</td>
+                                <td>${genre}</td>
+                                <td>${tempat}</td>
+                                <td>${tanggal}</td>
+                                <td>${alamat}</td>
+                                <td>${hp}</td>
+                                <td>${email}</td>
+                                <td>${hobi}</td>
+                             </tr>`;
+                tabelbody.innerHTML += row;
+                form.reset();
+            });
+
+        </script>
+    </center>
+</body>
+</html>
