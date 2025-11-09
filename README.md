@@ -3,4 +3,4 @@
 Program ini dibuat bertujuan untuk memenuhi tugas
 
 ## Screenshot
-![Hasil Program](images/PERTEMUAN5.png) 
+![INPUT-DATA-MAHASISWA](images/PERTEMUAN5.png) 
